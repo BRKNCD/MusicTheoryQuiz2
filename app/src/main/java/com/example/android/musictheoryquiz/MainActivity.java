@@ -198,7 +198,9 @@ public class MainActivity extends AppCompatActivity {
     public void controlAnswers(CheckBox checkAnswer, int questionNumber) {
 
         String answer = checkAnswer.getText().toString();
-
+        /** Here it doesn't matter if you can select all CheckBoxes and still get's point for right
+         * answers because you also loose point from the wrong one :)
+         */
         if (answer.equals(correctAnswer[questionNumber][0]) || answer.equals(correctAnswer[questionNumber][1])) {
             pointsCounter += 10;
         } else {
