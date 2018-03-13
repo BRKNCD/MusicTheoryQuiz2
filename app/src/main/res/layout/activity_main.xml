@@ -421,7 +421,7 @@
                     android:text="Phrygian scale" />
 
                 <RadioButton
-                    android:id="@+id/radio23"
+                    android:id="@+id/radio_major_scale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"

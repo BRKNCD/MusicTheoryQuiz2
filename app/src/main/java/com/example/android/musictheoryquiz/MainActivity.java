@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
         radio21 = findViewById(R.id.radio21);
         radio22 = findViewById(R.id.radio22);
-        radio23 = findViewById(R.id.radio23);
+        radio23 = findViewById(R.id.radio_major_scale);
 
         radio31 = findViewById(R.id.radio31);
         radio32 = findViewById(R.id.radio32);
@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
                     pointsCounter -= 5;
                 break;
 
-            case R.id.radio23:
+            case R.id.radio_major_scale:
                 if (radio23.isChecked())
                     pointsCounter += 10;
                 break;

@@ -77,7 +77,7 @@ public class scoreActivity extends AppCompatActivity {
                     smileRating.setSelectedSmile(BaseRating.TERRIBLE, true);
                 }
             });
-            Toast toast = Toast.makeText(context, "Your score is: " + point + " " + R.string.terrible, duration);
+            Toast toast = Toast.makeText(context, "Your score is: " + point + " terrible", duration);
             toast.show();
         } else {
             if (point > 0 && point <= 20) {
@@ -87,7 +87,7 @@ public class scoreActivity extends AppCompatActivity {
                         smileRating.setSelectedSmile(BaseRating.BAD, true);
                     }
                 });
-                Toast toast = Toast.makeText(context, "Your score is: " + point + " " + R.string.bad, duration);
+                Toast toast = Toast.makeText(context, "Your score is: " + point + " bad", duration);
                 toast.show();
             } else {
                 if (point > 20 && point <= 60) {
@@ -97,7 +97,7 @@ public class scoreActivity extends AppCompatActivity {
                             smileRating.setSelectedSmile(BaseRating.OKAY, true);
                         }
                     });
-                    Toast toast = Toast.makeText(context, "Your score is: " + point + " " + R.string.okay, duration);
+                    Toast toast = Toast.makeText(context, "Your score is: " + point + " okay", duration);
                     toast.show();
                 } else {
                     if (point > 60 && point <= 80) {
@@ -107,7 +107,7 @@ public class scoreActivity extends AppCompatActivity {
                                 smileRating.setSelectedSmile(BaseRating.GOOD, true);
                             }
                         });
-                        Toast toast = Toast.makeText(context, "Your score is: " + point + " " + R.string.good, duration);
+                        Toast toast = Toast.makeText(context, "Your score is: " + point + " good", duration);
                         toast.show();
                     } else {
                         if (point > 80) {
@@ -117,7 +117,7 @@ public class scoreActivity extends AppCompatActivity {
                                     smileRating.setSelectedSmile(BaseRating.GREAT, true);
                                 }
                             });
-                            Toast toast = Toast.makeText(context, "Your score is: " + point + " " + R.string.great, duration);
+                            Toast toast = Toast.makeText(context, "Your score is: " + point + " great", duration);
                             toast.show();
                         }
                     }
