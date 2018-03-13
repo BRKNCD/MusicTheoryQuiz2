@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radio1;
     RadioButton radio2;
     RadioButton radio3;
+    RadioButton radio21;
+    RadioButton radio22;
+    RadioButton radio23;
+    RadioButton radio31;
+    RadioButton radio32;
+    RadioButton radio33;
     RadioGroup radioGroup;
     RadioGroup radioGroup2;
     RadioGroup radioGroup3;
@@ -131,6 +137,15 @@ public class MainActivity extends AppCompatActivity {
         radio1 = findViewById(R.id.radio1);
         radio2 = findViewById(R.id.radio2);
         radio3 = findViewById(R.id.radio3);
+
+        radio21 = findViewById(R.id.radio21);
+        radio22 = findViewById(R.id.radio22);
+        radio23 = findViewById(R.id.radio23);
+
+        radio31 = findViewById(R.id.radio31);
+        radio32 = findViewById(R.id.radio32);
+        radio33 = findViewById(R.id.radio33);
+
         radioGroup = findViewById(R.id.radiogroup);
         radioGroup2 = findViewById(R.id.radiogroup2);
         radioGroup3 = findViewById(R.id.radiogroup3);
@@ -219,18 +234,18 @@ public class MainActivity extends AppCompatActivity {
         // Check which radio button was clicked
         int id = radioGroup2.getCheckedRadioButtonId();
         switch (id) {
-            case R.id.radio1:
-                if (radio1.isChecked())
+            case R.id.radio21:
+                if (radio21.isChecked())
                     pointsCounter -= 5;
                 break;
 
-            case R.id.radio2:
-                if (radio2.isChecked())
+            case R.id.radio22:
+                if (radio22.isChecked())
                     pointsCounter -= 5;
                 break;
 
-            case R.id.radio3:
-                if (radio3.isChecked())
+            case R.id.radio23:
+                if (radio23.isChecked())
                     pointsCounter += 10;
                 break;
         }
@@ -242,18 +257,18 @@ public class MainActivity extends AppCompatActivity {
         // Check which radio button was clicked
         int id = radioGroup3.getCheckedRadioButtonId();
         switch (id) {
-            case R.id.radio1:
-                if (radio1.isChecked())
+            case R.id.radio31:
+                if (radio31.isChecked())
                     pointsCounter -= 5;
                 break;
 
-            case R.id.radio2:
-                if (radio2.isChecked())
+            case R.id.radio32:
+                if (radio32.isChecked())
                     pointsCounter += 10;
                 break;
 
-            case R.id.radio3:
-                if (radio3.isChecked())
+            case R.id.radio33:
+                if (radio33.isChecked())
                     pointsCounter -= 5;
                 break;
         }
@@ -264,20 +279,10 @@ public class MainActivity extends AppCompatActivity {
 
         String editTextAnswer = freeAnswer.getText().toString();
         String rightAnswer = getString(R.string.rightAnswer);
-        if (editTextAnswer.equals(rightAnswer)) {
-
+        if (editTextAnswer.equalsIgnoreCase(rightAnswer)) {
             pointsCounter += 10;
-
         } else {
             pointsCounter -= 5;
-        }
-    }
-
-    // METHOD FOR RESETTING CHECKBOXES STATE
-    public void resetCheckBoxes() {
-        for (int questionIndex = 0; questionIndex < answers.length; questionIndex++) {
-            for (int i = 0; i < answers[0].length; i++)
-                checkBoxArray[questionIndex][i].setChecked(false);
         }
     }
 

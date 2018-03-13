@@ -9,4 +9,9 @@
     <string name="answerScaleQuestion2">W H W W H WH H</string>
     <string name="yourScore">Your score:</string>
     <string name="newGame">New Game</string>
+    <string name="terrible">Terrible</string>
+    <string name="bad">Bad</string>
+    <string name="okay">Okay</string>
+    <string name="good">Good</string>
+    <string name="great">Great</string>
 </resources>
