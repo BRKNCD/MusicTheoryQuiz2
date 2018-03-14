@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton submit;
 
     // THIS WILL STORE THE POINT
-    int pointsCounter = 0;
+    int pointsCounter;
 
     // A 2D ARRAY FOR STORING THE CORRECT ANSWERS
     String[][] correctAnswer = {{"G maj", "E min"},
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 checkEditText();
 
                 // THIS WILL PAS INT POINTSCOUNTER TO OTHER ACTIVYTY (SCORE_ACTIVITY)
-                Intent i = new Intent(MainActivity.this, scoreActivity.class);
+                Intent i = new Intent(MainActivity.this, ScoreActivity.class);
                 i.putExtra("pointsCounter", pointsCounter);
                 startActivity(i);
             }
@@ -198,8 +198,12 @@ public class MainActivity extends AppCompatActivity {
     public void controlAnswers(CheckBox checkAnswer, int questionNumber) {
 
         String answer = checkAnswer.getText().toString();
-        /** Here it doesn't matter if you can select all CheckBoxes and still get's point for right
-         * answers because you also loose point from the wrong one :)
+        /** Here EVERY CheckBox is checked from the controlCheck() method
+         * is passed here and then compared by this method, so if I select
+         * all the 4 CheckBoxes I will have 2 RIGHT answers and two WRONG answers!
+         * make the point = 10 + 10 - 5 - 5;
+         * it's logic, I cant know before which CheckBox has the right answer because I assign
+         * the answer randomly
          */
         if (answer.equals(correctAnswer[questionNumber][0]) || answer.equals(correctAnswer[questionNumber][1])) {
             pointsCounter += 10;

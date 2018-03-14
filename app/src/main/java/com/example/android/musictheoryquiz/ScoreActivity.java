@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 
-public class scoreActivity extends AppCompatActivity {
+public class ScoreActivity extends AppCompatActivity {
 
     // DECLARE VIEWS
     TextView score;
@@ -39,7 +39,7 @@ public class scoreActivity extends AppCompatActivity {
 
         newGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(scoreActivity.this, MainActivity.class);
+                Intent i = new Intent(ScoreActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
